@@ -7,6 +7,9 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import NoMatch from './components/NoMatch'; 
 import Menu from './components/Menu';
+import ProtectedRoute from './components/ProtectedRoute';
+
+
 
 const App = () => ( 
   <div>
@@ -15,9 +18,11 @@ const App = () => (
       <Route exact path="/" component={Home} /> 
       <Route path="/about" component={About} />
       <Route path="/login" component={Login} />
-      <Route path="/dashboard" component={Dashboard}/>
-      <Route path="/menu_items/:id" component={Menu}/>
+      <ProtectedRoute path="/dashboard" component={Dashboard} />
+      <ProtectedRoute path="/menu_items/:id" component={Menu} />
+
       <Route component={NoMatch} />
+      
     </Switch>
   </div>
 );

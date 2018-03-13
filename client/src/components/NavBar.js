@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import { isAuthenticated, logout } from '../fakeAuth';
-
+import Foundation from 'react-foundation';
 const styles = {
   active: {
     textDecoration: 'underline',
